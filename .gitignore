@@ -128,13 +128,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-dest/
 
 .DS_store
-dest
 node_modules
 *.scss
 .babelrc
 gulpfile.babel.js
 package-lock.json
 package.json
+reset.css
