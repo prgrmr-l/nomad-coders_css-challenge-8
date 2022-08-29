@@ -131,7 +131,6 @@ dist
 
 .DS_store
 node_modules
-*.scss
 .babelrc
 gulpfile.babel.js
 package-lock.json

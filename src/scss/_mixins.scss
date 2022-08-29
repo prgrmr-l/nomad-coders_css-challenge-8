@@ -1,0 +1,11 @@
+@mixin link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: whitesmoke;
+}
+
+@mixin fliper {
+  display: inline-block;
+  transform: rotateX(180deg);
+}
