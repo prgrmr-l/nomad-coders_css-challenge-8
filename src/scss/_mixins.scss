@@ -1,12 +1,22 @@
 @mixin link {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: whitesmoke;
-  padding-bottom: 0.5rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 0.5rem solid #f07140;
+  span {
+    display: flex;
+    width: 100%;
+    font-size: 2.5rem;
+    color: #f07140;
+  }
 }
-
-@mixin fliper {
-  display: inline-block;
-  transform: rotateX(180deg);
+@mixin sideTxt {
+  display: flex;
+  height: 100%;
+  font-size: 2.5rem;
+  color: #f07140;
+  transform: rotate(90deg);
+  transform-origin: left top;
+  float: left;
 }
