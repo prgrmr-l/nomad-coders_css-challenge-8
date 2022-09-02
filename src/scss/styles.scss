@@ -1,139 +1,72 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import "_mixins";
-
 html {
   font-size: 10px;
-  background-color: black;
 }
+
+//1375
+//835 45 500
 
 body {
   display: grid;
-  gap: 0.3rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 100%;
+  height: 300vh;
   width: 100%;
+  grid-template-columns: 60% 40%;
+  background-color: #cb4f11;
 }
 
-form {
+.leftWrpper {
   display: grid;
-  background-color: white;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-  grid-auto-rows: 4rem;
-  gap: 0.3rem;
-  background-color: black;
-  margin-top: 0.3rem;
-  select {
-    border: 0;
-    background: url("https://t1.daumcdn.net/cfile/tistory/99761B495C84AA8716")
-      no-repeat 95% 50%;
-    padding-left: 1rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: white;
+  width: 100%;
+  grid-template-rows: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-auto-rows: 3.5rem;
+}
+.rightWrpper {
+  position: fixed;
+  display: grid;
+  height: 100%;
+  width: 40%;
+  margin-left: 60%;
+  grid-template-columns: repeat(auto-fill, minmax(8%, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(6rem, 1fr));
+  grid-auto-rows: 6rem;
+}
+.box:hover {
+  background-color: gold;
+}
+.box {
+  display: grid;
+  height: 100%;
+  background-color: #cb4f11;
+  grid-template-columns: repeat(auto-fill, minmax(3.5rem, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(50%, 1fr));
+
+  div {
+    margin: 1px;
+    background-color: #c9870f;
   }
-}
-
-main {
-  display: grid;
-  background-color: black;
-  gap: 0.35rem;
-  grid-template-columns: repeat(auto-fill, minmax(42rem, 1fr));
-  grid-auto-rows: 30rem;
-  column-fill: auto;
-}
-
-.insideBox {
-  display: grid;
-  background-color: white;
-  grid-template-columns: repeat(auto-fill, minmax(5%, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(5%, 1fr));
   div:first-child {
-    @include link;
     grid-column-start: 1;
-    grid-column-end: 7;
+    grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
-    padding-top: 1rem;
-    justify-content: start;
   }
   div:nth-child(2) {
-    @include link;
-    grid-column-start: -7;
-    grid-column-end: -1;
+    grid-column-start: 2;
+    grid-column-end: -6;
     grid-row-start: 1;
     grid-row-end: 3;
-    padding-top: 1rem;
-    justify-content: end;
   }
-
   div:nth-child(3) {
-    grid-column-start: 4;
-    grid-column-end: -4;
-    grid-row-start: 4;
-    grid-row-end: -4;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-  div:nth-child(4) {
-    @include link;
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: -1;
-    grid-row-end: -3;
-    padding-bottom: 1rem;
-    justify-content: start;
-  }
-  div:nth-child(5) {
-    @include link;
-    grid-column-start: -7;
+    grid-column-start: -6;
     grid-column-end: -1;
-    grid-row-start: -1;
-    grid-row-end: -3;
-    padding-bottom: 1rem;
-    justify-content: end;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
-}
 
-#first {
-  background-image: url("https://iso.500px.com/wp-content/uploads/2016/11/stock-photo-159533631-1500x1000.jpg");
-  background-size: cover;
-}
-#second {
-  background-image: url("https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=2000");
-  background-size: cover;
-}
-#third {
-  background-image: url("https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg");
-  background-size: cover;
-}
-#fourth {
-  background-image: url("https://thumbs.dreamstime.com/b/landscape-nature-mountan-alps-rainbow-76824355.jpg");
-  background-size: cover;
-}
-#fifth {
-  background-image: url("https://www.cnet.com/a/img/resize/304300299ceaadf8e363de73c2c22c39ac160ca2/2020/04/16/7d6d8ed2-e10c-4f91-b2dd-74fae951c6d8/bazaart-edit-app.jpg?auto=webp&fit=crop&height=675&width=1200");
-  background-size: cover;
-}
-
-#sixth {
-  background-image: url("https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFya3xlbnwwfHwwfHw%3D&w=1000&q=80");
-  background-size: cover;
-}
-
-#seventh {
-  background-image: url("https://images.hdrsoft.com/images/lighthouse/thumbs/hdr-vibrant.jpg");
-  background-size: cover;
-}
-
-#eighth {
-  background-image: url("https://shuttermuse.com/wp-content/uploads/2015/03/what-is-a-photo.jpg");
-  background-size: cover;
-}
-
-#nineth {
-  background-image: url("https://improvephotography.com/wp-content/uploads/2011/06/baseballFieldMorningHDR.jpg");
-  background-size: cover;
+  div:nth-child(4) {
+    grid-column-start: -6;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
 }
