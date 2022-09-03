@@ -219,7 +219,7 @@ body {
     }
     span:nth-child(2) {
       display: flex;
-      font-size: 2rem;
+      font-size: 1vw;
     }
   }
 }
@@ -234,6 +234,7 @@ body {
     justify-content: space-between;
     width: 100%;
     border-top: 0;
+    margin-top: -0.5rem;
   }
   div:nth-child(2) {
     span:nth-child(1) {
@@ -280,4 +281,8 @@ body {
   grid-column-end: -1;
   grid-row-start: -5;
   grid-row-end: -1;
+}
+
+.longName {
+  word-spacing: -0.3vw;
 }
